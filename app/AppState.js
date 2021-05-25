@@ -9,6 +9,9 @@ class AppState extends EventEmitter {
 
   /** @type {Category[]} */
   categories = []
+
+  /** @type {IncAnswer[]} */
+  incorrects = []
 }
 
 export const ProxyState = new Proxy(new AppState(), {

@@ -12,21 +12,20 @@ export class Category{
     get listTemplate() {
         return `
         <div>
-        <p><b>${this.category}</b> Heres Your Question 
-         ${this.question}</p>
-        <button>${this.incorrect}</button>
-        <button>${this.correct}</button>
-
-        </div>
+        <p><b>${this.category}</b> ${this.question}</p>
+         <button>${this.correct}</button>
+         
+         </div>
+         
+         `
+         
+        }
         
-        `
-        
-}
-
-
+        //Make a template += for the incorrect answers???
+        // <button>${this.incorrect}</button>
 }
 
 //  <p>${this.incorrect_answer[1]}</p>
 //         <p>${this.incorrect_answer[2]}</p>
 
-
+//ORRR do i set a index array here and then assign incorrect answers to it?
