@@ -1,10 +1,10 @@
-export class Category{
+export class Category {
     constructor(data) {
         this.category = data.category
         this.type = data.type
         this.question = data.question
         this.correct = data.correct_answer
-        this.incorrect = data.incorrect_answer
+        this.incorrect = data.incorrect_answers
         this.url = data.url
     }
 
@@ -13,19 +13,29 @@ export class Category{
         return `
         <div>
         <p><b>${this.category}</b> ${this.question}</p>
-         <button>${this.correct}</button>
-         
+    <button>${this.correct}</button>
+    ${this.incorrectAns()}
+
          </div>
          
          `
          
-        }
-        
-        //Make a template += for the incorrect answers???
-        // <button>${this.incorrect}</button>
+    }
+
+    incorrectAns() {
+        console.log(this.incorrect)
+        let template = ''
+        this.incorrect.forEach(i => {
+            template += `
+            <button>${i}</button>
+            `
+        })
+    
+        return template
+    }
+    
 }
 
-//  <p>${this.incorrect_answer[1]}</p>
-//         <p>${this.incorrect_answer[2]}</p>
 
-//ORRR do i set a index array here and then assign incorrect answers to it?
+
+

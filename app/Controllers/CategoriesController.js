@@ -9,11 +9,11 @@ function drawCategories() {
 
 
 
-
 export class CategoriesController{
     constructor() {
         ProxyState.on('categories', drawCategories)
         drawCategories()
+        
     }
 
 
@@ -34,3 +34,9 @@ export class CategoriesController{
 
 
 }
+
+// function mudInc() {
+//     let inc = ProxyState.category.
+//     ProxyState.items.forEach(i => template += i.Template)
+//     document.getElementById('items').innerHTML = template
+// }

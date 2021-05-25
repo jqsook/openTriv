@@ -1,11 +1,16 @@
 import { ProxyState } from "../AppState.js"
 import { Category }  from "../Models/Category.js"
 
+
+
+
 class OpenTrivService {
     async getCategorie(url) {
         let res = await fetch(url)
         let data = await res.json()
+        console.log(data)
         ProxyState.Category = new Category(data)
+       
     }
 
     async getCategories() {
